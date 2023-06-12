@@ -1,0 +1,122 @@
+.quest {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgb(184, 178, 178);
+}
+
+.small-box {
+  width: 50%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+
+  color: #333;
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.541);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.514);
+  box-shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.562);
+  /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; */
+}
+
+.small-box span {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.small-box div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.setQuestions {
+  /* background: url("https://img.freepik.com/free-photo/front-view-stacked-books-graduation-cap-open-book-education-day_23-2149241017.jpg?w=826&t=st=1686422436~exp=1686423036~hmac=fb262b643e174e5fc10a769f3650e08fb4d0207df4d67d7c794bf4af33b07830 "); */
+  height: 100%;
+  /* background-size: cover; */
+  background: limegreen;
+  color: #fff;
+}
+.review {
+  height: 100%;
+  background-color: #fff;
+}
+.small-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.h1:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*.bigB {
+    
+    margin: 0;
+    padding: 0;
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   
+   
+      
+    }
+    
+    .background-image {
+      background-image: url("./OIF.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 100%;
+    }
+    
+    .quest {
+      background-image: url("./pict2i.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+  
+     
+    }
+    
+    .review {
+     
+        width: 100px;
+        height: 100px;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+      }
+   
+    
+    /*  <div className="rv" style={{flexDirection:'row', alignItems:'center'}}>*/
