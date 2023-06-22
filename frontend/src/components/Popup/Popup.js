@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./popup.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
-function Popup({ image, close }) {
+function Popup({ image, close, location }) {
+  const navigate = useNavigate();
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
   const handleInputChange = (e) => {
@@ -11,8 +13,7 @@ function Popup({ image, close }) {
 
   const handleSubmit = () => {
     if (inputValue === "correctValue") {
-      // Navigate to another page or perform some action
-      alert("Input is correct!");
+      navigate(`${location}`);
     } else {
       setInputError("Please enter staff id");
     }
