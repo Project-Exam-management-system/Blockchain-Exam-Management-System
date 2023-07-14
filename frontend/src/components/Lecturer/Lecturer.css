@@ -46,10 +46,29 @@
   /* background-size: cover; */
   background: limegreen;
   color: #fff;
+  display: flex;
+  flex-direction: row;
 }
 .review {
   height: 100%;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.review-box {
+  flex: 1;
+  display: flex;
+  margin-top: 140px;
+  cursor: pointer;
+}
+.text-box {
+  flex: 1;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .small-box img {
   width: 50px;
