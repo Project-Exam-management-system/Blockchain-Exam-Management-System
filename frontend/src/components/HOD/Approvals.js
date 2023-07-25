@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import "./photocopy.css";
+import { useEffect, useState } from "react";
+import "./Approvals.css";
 import pdficon from "../../imgs/pdficon.png";
 
-const Photocopy = () => {
+const Approvals = () => {
   const [selectedYear, setSelectedYear] = useState("");
 
   useEffect(() => {
@@ -64,46 +64,63 @@ const Photocopy = () => {
       <div className="C">
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
         <div className="unit">
           <img src={pdficon} alt="" />
-        </div>
-        <div className="unit">
-          <img src={pdficon} alt="" />
-        </div>
-        <div className="unit">
-          <img src={pdficon} alt="" />
-        </div>
-        <div className="unit">
-          <img src={pdficon} alt="" />
-        </div>
-        <div className="unit">
-          <img src={pdficon} alt="" />
-        </div>
-        <div className="unit">
-          <img src={pdficon} alt="" />
+          <div className="Option">
+            <button> Approve</button>
+            <button> Decline</button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Photocopy;
+export default Approvals;

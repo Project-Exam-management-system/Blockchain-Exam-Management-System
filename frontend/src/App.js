@@ -8,6 +8,9 @@ import Lecturer from "./components/Lecturer/Lecturer";
 import Questions from "./components/Questions/Questions";
 import Review from "./components/Review/Review";
 import Photocopy from "./components/Photocopy/Photocopy";
+import Hod from "./components/HOD/Hod";
+import Approvals from "./components/HOD/Approvals";
+import Appointments from "./components/HOD/Appointments";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,18 @@ const router = createBrowserRouter([
   {
     path: "/choose/photocopy",
     element: <Photocopy />,
+  },
+  {
+    path: "/choose/hod",
+    element: <Hod />,
+  },
+  {
+    path: "/choose/hod/approvals",
+    element: <Approvals />,
+  },
+  {
+    path: "/choose/hod/appointments",
+    element: <Appointments />,
   },
 ]);
 function App() {

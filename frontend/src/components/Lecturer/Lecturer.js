@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "./Lecturer.css";
 import review from "../../imgs/review.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Joi from "joi";
+import { useEffect } from "react";
+import Popup from "../Popup/Popup";
 
 function Lecturer() {
-  //const history = useHistory();
+  const param = useParams();
   const [inputData, setInputData] = useState("");
   const [inputError, setInputError] = useState("");
-  const [show, setshow] = useState("false");
+  const [show, setshow] = useState("");
+  const [user, setUser] = useState("");
+  const [popup, setPopup] = useState(false);
   const navigate = useNavigate();
-  const handleClick = () => {
-    setshow(!show);
-  };
 
   const handleInputChange = (e) => {
     setInputData(e.target.value);
@@ -29,49 +30,38 @@ function Lecturer() {
       navigate("/choose/lecturer/review");
     }
   };
+  useEffect(() => {
+    const user1 = JSON.parse(localStorage.getItem("user"));
+    setUser(user1);
+  }, []);
+
+  const handleClick = () => {
+    setPopup(!popup);
+  };
 
   return (
     <div className="quest">
-      <div className="small-box">
-        <div className="setQuestions">
-          <Link to="questions">
-            <div>
-              <span>Set Questions</span>
+      <p className="userinfo">{user.name}</p>
+      <div className="boxes">
+        <div className="small-box">
+          <div className="setQuestions Q">
+            <Link to="questions">
+              <div>
+                <span>Set Questions</span>
+                <img src={review} alt="" />
+              </div>
+            </Link>
+          </div>
+          <hr />
+          <div className="review ">
+            <div className="review-box" onClick={handleClick}>
+              <span>Review Questions</span>
               <img src={review} alt="" />
             </div>
-          </Link>
-        </div>
-        <hr />
-        <div className="review">
-          <div className="review-box" onClick={handleClick}>
-            <span>Review Questions</span>
-            <img src={review} alt="" />
-          </div>
-          <div className="text-box">
-            {show && (
-              <input
-                className="input"
-                type="text"
-                placeholder="Enter course code"
-                value={inputData}
-                onChange={handleInputChange}
-                required
-                pattern="correctValue"
-              />
-            )}
-            {show && inputError && (
-              <p className="error" style={{ fontSize: "12px" }}>
-                {inputError}
-              </p>
-            )}
-            {show && (
-              <button className="close" onClick={handleSubmit}>
-                Submit
-              </button>
-            )}
           </div>
         </div>
       </div>
+      {popup && <Popup close={() => setPopup(false)} />}
     </div>
   );
 }

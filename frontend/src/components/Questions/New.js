@@ -7,7 +7,7 @@ const DropdownMenu = () => {
     { id: 1, name: "Petroleum Building" },
     { id: 2, name: "Bamfo Kwakye Building" },
     { id: 3, name: "Ceaser Building" },
-    { id: 4, name: "N B lock" },
+    { id: 4, name: "N Block" },
     { id: 5, name: "New Building" },
   ]);
 
