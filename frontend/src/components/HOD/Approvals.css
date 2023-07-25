@@ -9,9 +9,8 @@
 
 .B {
   display: flex;
-  flex-wrap: wrap;
   /* flex-direction: column;*/
-  height: 60px;
+  height: 200px;
 }
 
 .box1,
@@ -25,8 +24,16 @@
   border: 1px solid #000;
   border-radius: 5px;
   padding: 10px;
-
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
   cursor: pointer;
+}
+
+/* Change background color on hover */
+.box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+  background-color: #21da10; /* Change to your desired hover color */
 }
 
 .unit {
@@ -47,12 +54,4 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
-}
-
-@media (max-width: 767px) {
-  .box {
-    width: calc(
-      50% - 10px
-    ); /* Adjust the width of each box for smaller screens */
-  }
 }

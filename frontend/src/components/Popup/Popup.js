@@ -1,23 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./popup.css";
 import { Navigate, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Popup({ image, close, location }) {
   const navigate = useNavigate();
-  const [inputValue, setInputValue] = useState("");
+  const [data, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
     setInputError("");
   };
 
-  const handleSubmit = () => {
-    if (inputValue === "correctValue") {
+  const handleSubmit = async () => {
+    if (data === "correctValue") {
       navigate(`${location}`);
     } else {
       setInputError("Please enter staff id");
     }
   };
+  useEffect(() => {
+    // Disable scrolling when the popup is open
+    document.body.style.overflow = "hidden";
+
+    // Re-enable scrolling when the popup is closed
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <>
       <div className="overlay" onClick={close}></div>
@@ -29,7 +39,7 @@ function Popup({ image, close, location }) {
             className="inputid"
             type="text"
             placeholder="Enter your staff id"
-            value={inputValue}
+            value={data}
             onChange={handleInputChange}
             required
             pattern="correctValue"

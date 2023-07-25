@@ -64,7 +64,7 @@
   border-radius: 10px;
   outline: none;
   padding: 0 10px;
-  font-size: 15px;
+  font-size: 1rem;
   color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
@@ -116,4 +116,44 @@
   height: 220px;
   object-fit: cover;
   margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .popup {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .close {
+    width: 100px;
+    height: 30px;
+    font-size: medium;
+  }
+  .inputid::placeholder {
+    font-size: 0.7rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Responsive styles for tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .popup {
+    width: 70%;
+  }
+
+  .text-box {
+    width: 70%;
+  }
+  .inputid::placeholder {
+    font-size: 0.9rem; /* Adjust the font size for intermediate-sized screens */
+  }
+}
+
+/* Responsive styles for larger desktops and beyond */
+@media (min-width: 1024px) {
+  .popup {
+    width: 40%;
+  }
+  .inputid::placeholder {
+    font-size: 1rem; /* Adjust the font size for larger screens */
+  }
 }
