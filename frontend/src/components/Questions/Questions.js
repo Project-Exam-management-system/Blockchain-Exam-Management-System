@@ -45,60 +45,86 @@ const Questions = () => {
               <h2 className="Date">Date:</h2>
               <input
                 name="date"
-                type="text"
-                placeholder="Date"
-                maxLength="29"
+                type="date"
+                placeholder="Date(DD-MM-YYYY)"
+                maxLength="10"
+                pattern="\d{2}-d{2}-\d{4}"
+                title="Please enter a date in the format DD-MM-YYYY "
+                required
+                onBlur={(e) => {
+                  e.target.reportValidity();
+                }}
               />
             </div>
             <div className="input-item">
               <h2>Number of students:</h2>
               <input
-                name="venue"
-                type="text"
-                placeholder="Venue"
-                maxLength="29"
+                name="Number of students"
+                type="number"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                placeholder="Number of students"
+                maxLength="5"
+                onBlur={(e) => {
+                  e.target.reportValidity();
+                }}
+                // onKeyDown={(e) => {
+                //   if (e.key === "Enter") {
+                //     e.preventDefault();
+                //     e.target.reportValidity();
+                //   }
+                // }}
               />
             </div>
             <div className="input-item">
               <h2 className="Time">Time:</h2>
               <input
                 name="time"
-                type="text"
-                placeholder="Time"
-                maxLength="29"
+                type="time"
+                placeholder="Time(HH:mm)"
+                required
+                onBlur={(e) => {
+                  e.target.reportValidity();
+                }}
+                // onKeyDown={(e) => {
+                //   if (e.key === "Enter") {
+                //     e.preventDefault();
+                //     e.target.reportValidity();
+                //   }
+                // }}
               />
             </div>
           </div>
-
-          <div className="drops">
-            <div className="drop-item">
-              <select value={selectedOption} onChange={handleOptionChange}>
-                <option value="">Duration</option>
-                <option value="option1">1 hour</option>
-                <option value="option2">1 hour 30 minutes </option>
-                <option value="option3">2 hours</option>
-                <option value="option4">2 hours 30 minutes</option>
-                <option value="option5">3 hours</option>
-              </select>
-            </div>
-
-            <div className="drop-item">
-              <select
-                value={SelectedOption}
-                onChange={handleSelectedOptionChange}
-              >
-                <option value="">Select an option</option>
-                <option value="option1">Petroleum Building</option>
-                <option value="option2">Bamfo Kwakye Building</option>
-                <option value="option3">Ceaser Building</option>
-                <option value="option4">Kumpaley Auditorium</option>
-                <option value="option5">Another option</option>
-              </select>
-            </div>
-
-            <DropdownMenu />
-          </div>
         </form>
+
+        <div className="drops">
+          <div className="drop-item">
+            <select value={selectedOption} onChange={handleOptionChange}>
+              <option value="">Duration</option>
+              <option value="option1">1 hour</option>
+              <option value="option2">1 hour 30 minutes </option>
+              <option value="option3">2 hours</option>
+              <option value="option4">2 hours 30 minutes</option>
+              <option value="option5">3 hours</option>
+            </select>
+          </div>
+
+          <div className="drop-item">
+            <select
+              value={SelectedOption}
+              onChange={handleSelectedOptionChange}
+            >
+              <option value="">Select an option</option>
+              <option value="option1">Petroleum Building</option>
+              <option value="option2">Bamfo Kwakye Building</option>
+              <option value="option3">Ceaser Building</option>
+              <option value="option4">Kumpaley Auditorium</option>
+              <option value="option5">Another option</option>
+            </select>
+          </div>
+
+          <DropdownMenu />
+        </div>
       </div>
 
       <div className="upload" bg-white>
