@@ -3,7 +3,7 @@ import "./popup.css";
 import { Navigate, useNavigate } from "react-router-dom";
 
 
-function Popup({ image, close, location }) {
+function Popup({ image, close, location, showSubmitButton = true }) {
   const navigate = useNavigate();
   const [data, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
@@ -13,12 +13,17 @@ function Popup({ image, close, location }) {
   };
 
   const handleSubmit = async () => {
-    if (data === "correctValue") {
+    // Create a regular expression to match exactly seven digits
+    const sevenDigitRegex = /^\d{7}$/;
+
+    // Check if the input data matches the sevenDigitRegex
+    if (sevenDigitRegex.test(data)) {
       navigate(`${location}`);
     } else {
-      setInputError("Please enter staff id");
+      setInputError("Please enter exactly seven integers");
     }
   };
+
   useEffect(() => {
     // Disable scrolling when the popup is open
     document.body.style.overflow = "hidden";
@@ -28,6 +33,7 @@ function Popup({ image, close, location }) {
       document.body.style.overflow = "auto";
     };
   }, []);
+
   return (
     <>
       <div className="overlay" onClick={close}></div>
@@ -42,7 +48,6 @@ function Popup({ image, close, location }) {
             value={data}
             onChange={handleInputChange}
             required
-            pattern="correctValue"
           />
           {inputError && (
             <p className="error" style={{ fontSize: "12px" }}>
@@ -50,9 +55,11 @@ function Popup({ image, close, location }) {
             </p>
           )}
 
-          <button className="close" onClick={handleSubmit}>
-            Submit
-          </button>
+          {showSubmitButton && ( // Conditionally render the submit button based on showSubmitButton prop
+            <button className="close" onClick={handleSubmit}>
+              Submit
+            </button>
+          )}
         </div>
       </div>
     </>
