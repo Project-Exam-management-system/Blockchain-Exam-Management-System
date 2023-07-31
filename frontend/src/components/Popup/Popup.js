@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./popup.css";
 import { Navigate, useNavigate } from "react-router-dom";
-import axios from "axios";
+
 
 function Popup({ image, close, location }) {
   const navigate = useNavigate();

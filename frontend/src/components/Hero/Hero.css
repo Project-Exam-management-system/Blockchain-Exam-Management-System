@@ -87,3 +87,11 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+
+.Card-container{
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: blue;
+}

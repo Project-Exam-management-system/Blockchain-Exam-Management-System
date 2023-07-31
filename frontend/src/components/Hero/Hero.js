@@ -31,7 +31,13 @@ const Hero = () => {
               <button className="button">CLICKME</button>
             </Link>
         </div>
+        <br/>
+        <div className=" flexCenter Card-container">
+           Card
         </div>
+
+        </div>
+        
 
         <div className="hero-right">
           <div className="hero-rbg">
@@ -40,22 +46,11 @@ const Hero = () => {
           </div> 
           </div>
         </div>
-    </div>
-      <div className="flexCenter">
-        <a
-          href="#choose-wrapper"
-          className={click ? "button" : ""}
-          onClick={closeMenu}
-        >
-          <img src={Arrow} alt="" />
-    </a>
-    </div>
 
-      <div className="bg-container">
-        <div className="bg"></div>
-        </div>
         
-      <div className="line"></div>
+    </div>
+        
+    
     </section>
   );
 };

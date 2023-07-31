@@ -11,10 +11,11 @@
 }
 
 .choose-head {
+  padding-top: 50px;
   padding-bottom: 50px;
 }
-.flexCenter {
-}
+
+
 .choose-head > h2 {
   color: black;
   font-size: 25px;
