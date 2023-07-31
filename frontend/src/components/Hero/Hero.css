@@ -7,6 +7,7 @@
 
 .hero-container {
   justify-content: space-between;
+
 }
 
 .image-container {
@@ -87,11 +88,30 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+.hero-left{
+  width : 65%;
 
+}
+
+.hero-right{
+  width : 35%;
+
+}
+
+.Card-wrapper{
+  display: flex;
+  gap: 10px;
+  position: relative;
+  bottom: 0;
+  top: 70px;
+  left: 50px; 
+}
 
 .Card-container{
   height: 100px;
   width: 200px;
+  padding: 10px;
   border-radius: 10px;
-  background-color: blue;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgb(202, 255, 214);
 }

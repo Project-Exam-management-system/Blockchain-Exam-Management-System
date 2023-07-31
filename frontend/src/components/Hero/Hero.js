@@ -14,6 +14,7 @@ const Hero = () => {
     <section className="hero-wrapper flex-1">
       <div className="flexCenter hero-container">
         <div className="paddings flexCenter hero-left">
+      
           <div className="hero-logo">
             <img src={Hero_logo} alt="" />
           </div>
@@ -31,9 +32,19 @@ const Hero = () => {
               <button className="button">CLICKME</button>
             </Link>
         </div>
-        <br/>
+     <div className="Card-wrapper">
         <div className=" flexCenter Card-container">
            Card
+        </div>
+        <div className=" flexCenter Card-container">
+           Card
+        </div>
+        <div className=" flexCenter Card-container">
+           Card
+        </div>
+        <div className=" flexCenter Card-container">
+           Card
+        </div>
         </div>
 
         </div>

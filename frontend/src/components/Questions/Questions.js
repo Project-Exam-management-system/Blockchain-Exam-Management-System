@@ -39,7 +39,7 @@ const Questions = () => {
   return (
     <div className="big">
       <div className="medium">
-        <form className="medium-form" onSubmit={(e) => e.preventDefault()}>
+        <form className=" flexCenter medium-form " onSubmit={(e) => e.preventDefault()}>
           <div className="input">
             <div className="input-item">
               <h2 className="Date">Date:</h2>
