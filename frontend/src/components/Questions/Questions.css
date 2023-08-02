@@ -11,7 +11,6 @@
   width: 20%;
   display: flex;
   align-items: center;
-  box-shadow: 10px 5px 50px gray;
   border-radius: 10px;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .medium {
-  background-color: whitesmoke;
+  background-color: rgb(206, 250, 180);
   height: 70%;
   width: 100%;
   display: flex;
@@ -29,12 +28,13 @@
 }
 
 .drops {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 60px;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 10px 5px 50px gray;
+  
 
 }
 

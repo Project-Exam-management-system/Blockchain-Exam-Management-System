@@ -99,8 +99,9 @@ const Questions = () => {
 
         <div className="drops">
           <div className="drop-item">
+          <h2 className="Duration"> Duration:</h2>
             <select value={selectedOption} onChange={handleOptionChange}>
-              <option value="">Duration</option>
+              <option value="" disabled selected>Duration</option>
               <option value="option1">1 hour</option>
               <option value="option2">1 hour 30 minutes </option>
               <option value="option3">2 hours</option>
@@ -110,11 +111,12 @@ const Questions = () => {
           </div>
 
           <div className="drop-item">
+          <h2 className="Venue">Venue:</h2>
             <select
               value={SelectedOption}
               onChange={handleSelectedOptionChange}
             >
-              <option value="">Select an option</option>
+              <option value="" disabled selected>Select an option</option>
               <option value="option1">Petroleum Building</option>
               <option value="option2">Bamfo Kwakye Building</option>
               <option value="option3">Ceaser Building</option>
@@ -123,7 +125,7 @@ const Questions = () => {
             </select>
           </div>
 
-          <DropdownMenu />
+          
         </div>
       </div>
 
