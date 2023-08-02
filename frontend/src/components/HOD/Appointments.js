@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import "./Appointment.css";
 
 const Appointments = () => {
@@ -130,3 +130,5 @@ const Appointments = () => {
 };
 
 export default Appointments;
+
+*/
